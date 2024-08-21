@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer's Prediction</title>
+    <style>
+        body {
+            background: #DCBFFF;
+            color: #000000;
+            font-family: Courier, monospace;
+            text-align: center;
+        }
+        .container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            margin: 100px;
+            padding: 250px;
+            border-radius: 100px;
+        }
+        h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 18px;
+        }
+        #upload-btn-wrapper {
+            overflow: hidden;
+            position: relative;
+            margin: 10px;
+        }
+        #upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        #upload-btn-wrapper .btn {
+            border: 2px solid gray;
+            background-color: #d32828;
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+        #upload-file-name {
+            margin-left: 10px;
+        }
+        .prediction-result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alzheimer Disease Prediction</h1>
+        <p>Upload your MRI scan to predict Alzheimer's disease.</p>
+        <form method="POST" action="{{url_for('upload')}}" enctype="multipart/form-data">
+            <input type="file" name="mri-scan" id="mri-scan" accept=".jpg, .jpeg, .png, .gif">
+            <input type="submit" , value="upload"> 
+        </form>
+        
+    </div>
+
+    
+</body>
+</html>

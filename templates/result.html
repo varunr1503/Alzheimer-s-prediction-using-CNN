@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer's Prediction</title>
+    <style>
+        body {
+            background: url('D:/Project/alzheimer_bg.jpg');
+            color: #000000;
+            font-family: Courier, monospace;
+            text-align: center;
+        }
+        .container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            margin: 100px;
+            padding: 200px;
+            border-radius: 100px;
+        }
+        h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <p>Based on the image uploaded you likely have : {{ text }} </p>
+        
+        
+    </div>
+
+    
+</body>
+</html>
